@@ -8,6 +8,9 @@
         <label for="date">Date</label>
         <input type="date" name="date" id="date">
         <br>
+        <label for="recurring">Recurring Event ?</label>
+        <input type="checkbox" name="recurring" id="recurring">
+        <br>
         <label for="event_name">Name</label>
         <input type="text" name="event_name" id="event_name">
         <br>
@@ -30,6 +33,19 @@
 
         <div>
             <p> {{ event.date }} : {{ event.name }}</p>
+            
+
+            <p> Recurring : 
+
+            {% if event.recurring %}
+                <span>&#9989</span>
+            
+            {% else %}
+                <span>&#x274C</span>
+
+            {% endif %}
+            
+            </p>
             <p> Number of guests: {{ event.guests }}</p>
             <p> Location: {{ event.address}} </p>
             <p> Description: {{ event.description }} </p>

@@ -13,6 +13,7 @@ def add_event():
     guest_number = request.form["guest_number"]
     event_address = request.form["address"]
     event_description = request.form["description"]
-    new_event = Event(event_date, event_name, guest_number, event_address, event_description)
+    recurrence = request.form["recurring"]
+    new_event = Event(event_date, event_name, guest_number, event_address, event_description, recurrence)
     add_new_event(new_event)
     return render_template("index.html", title="Home", events = event_list)
