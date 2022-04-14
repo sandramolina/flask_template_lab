@@ -5,5 +5,3 @@ class Event():
         self.guests = input_guests
         self.address = input_address
         self.description = input_description
-    
-    
