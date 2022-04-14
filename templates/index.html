@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div id="form-container-parent"></div>
+    <div id="page-parent">
         <div id="form-container">
             <h2>Add a new event</h2>
 
@@ -28,35 +28,35 @@
                 <input type="submit" value="Add Event">
             </form>
         </div>
-    </div>
-
-    <h2>Events List 2022</h2>
-
-    {% for event in events: %}
 
         <div>
-            <p> {{ event.date }} : {{ event.name }}</p>
-            
 
-            <p> Recurring : 
+            <h2>Events List 2022</h2>
 
-            {% if event.recurring %}
-                <span>&#9989</span>
-            
-            {% else %}
-                <span>&#x274C</span>
+            <div>
+            {% for event in events: %}
 
-            {% endif %}
             
-            </p>
-            <p> Number of guests: {{ event.guests }}</p>
-            <p> Location: {{ event.address}} </p>
-            <p> Description: {{ event.description }} </p>
+                <p> {{ event.date }} : {{ event.name }}</p>
+                
+
+                <p> Recurring : 
+
+                {% if event.recurring %}
+                    <span>&#9989</span>
+                
+                {% else %}
+                    <span>&#x274C</span>
+
+                {% endif %}
+                
+                </p>
+                <p> Number of guests: {{ event.guests }}</p>
+                <p> Location: {{ event.address}} </p>
+                <p> Description: {{ event.description }} </p>
+                {% endfor %}
+            </div>
         </div>
-
-    {% endfor %}
-
-
-
+    </div>
 
 {% endblock %}
