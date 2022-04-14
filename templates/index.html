@@ -1,31 +1,34 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <div id="form-container-parent"></div>
+        <div id="form-container">
+            <h2>Add a new event</h2>
 
-    <h2>Add a new event</h2>
-
-    <form action="/addevent" method="post">
-        <label for="date">Date</label>
-        <input type="date" name="date" id="date">
-        <br>
-        <label for="recurring">Recurring Event ?</label>
-        <input type="checkbox" name="recurring" id="recurring">
-        <br>
-        <label for="event_name">Name</label>
-        <input type="text" name="event_name" id="event_name">
-        <br>
-        <label for="guest_number">Number of Guests</label>
-        <input type="text" name="guest_number" id="guest_number">
-        <br>
-        <label for="address">Location</label>
-        <input type="text" name="address" id="address">
-        <br>
-        <label for="description">Description</label>
-        <br>
-        <textarea name="description" rows="3" cols="50"></textarea>
-        <br>
-        <input type="submit" value="Add Event">
-    </form>
+            <form action="/addevent" method="post">
+                <label for="date">Date</label>
+                <input type="date" name="date" id="date">
+                <br>
+                <label for="recurring">Recurring Event ?</label>
+                <input type="checkbox" name="recurring" id="recurring">
+                <br>
+                <label for="event_name">Name</label>
+                <input type="text" name="event_name" id="event_name">
+                <br>
+                <label for="guest_number">Number of Guests</label>
+                <input type="text" name="guest_number" id="guest_number">
+                <br>
+                <label for="address">Location</label>
+                <input type="text" name="address" id="address">
+                <br>
+                <label for="description">Description</label>
+                <br>
+                <textarea name="description" rows="3" cols="50"></textarea>
+                <br>
+                <input type="submit" value="Add Event">
+            </form>
+        </div>
+    </div>
 
     <h2>Events List 2022</h2>
 

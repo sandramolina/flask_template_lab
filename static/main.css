@@ -1,0 +1,46 @@
+body {
+    font-family: 'Oxygen', sans-serif;
+    margin: 0px;
+}
+
+header {
+    background-color: #EF476F;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw;
+}
+
+h1 {
+    margin-block-start: 0;
+}
+
+#nav-list {
+    list-style: none;
+}
+
+a {
+    color: white;
+}
+
+li {
+    display: inline;
+    padding: 1vw;
+}
+
+#form-container {
+    margin: 2vw;
+    background-color: #FFD166;
+    border: 2px solid #dfa111;
+    border-radius: 2vw;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw;
+}
+
+#form-container-parent {
+    display: flex;
+    align-items: center;
+}
